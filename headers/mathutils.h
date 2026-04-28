@@ -1,8 +1,8 @@
 #pragma once 
-
-#include <string> 
+#include <vector>
+ 
 
 // Declaration
-void sayHello(std::string name);
-void sayGoodbye(std::string name); 
-int countChars(std::string s);
+float avg(std::vector<float> nums);
+int factorial(int n); 
+int tetration(int base, int exp);

@@ -3,12 +3,41 @@
 #include <string>
 #include <iostream> 
 
-void sayHello(std::string name){
-    std::cout << "Hi!, " << name << "\n"; 
+
+float avg(std::vector<float> nums){
+    float accumul = 0;   
+    for (float n : nums){
+        accumul += n; 
+    }
+    return accumul/nums.size(); 
 }
-void sayGoodbye(std::string name){
-    std::cout << "Bye!, " << name << "\n"; 
+int factorial(int n){
+    
+    int res = 1; 
+    while(n > 0){
+        res *= n; 
+        n--;
+    }
+    return res; 
 } 
-int countChars(std::string s){
-    return s.size(); 
+
+int tetration(int a, int n){
+
+    if (n == 0){
+        return 1; 
+    }else if (n == 1){
+        return a;
+    }
+
+    int res = a;
+    int mult = a;
+    for (int i = 1; i < n; i++){
+        for (int j = 0; j < a-1; j++){
+            res *= mult;
+        }
+        mult = res;
+    }
+    
+    return res;
 }
+
