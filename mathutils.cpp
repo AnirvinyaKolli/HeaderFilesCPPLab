@@ -3,7 +3,7 @@
 #include <string>
 #include <iostream> 
 
-
+// defination for avg
 float avg(std::vector<float> nums){
     float accumul = 0;   
     for (float n : nums){
@@ -11,6 +11,8 @@ float avg(std::vector<float> nums){
     }
     return accumul/nums.size(); 
 }
+
+// defination for factorial
 int factorial(int n){
     
     int res = 1; 
@@ -21,6 +23,7 @@ int factorial(int n){
     return res; 
 } 
 
+// defination for tetration
 int tetration(int a, int n){
 
     if (n == 0){
